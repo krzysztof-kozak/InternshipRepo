@@ -75,6 +75,8 @@ function createStudentCard(studentData) {
   listItem.appendChild(visitedLectureParagraph);
   listItem.appendChild(averageMarkParagraph);
 
+  listItem.setAttribute("data-element", "card");
+
   return listItem;
 }
 
@@ -84,3 +86,15 @@ function createStudentCards(studentsData) {
 
 const studentCards = createStudentCards(students);
 studentCards.forEach((card) => studentList.appendChild(card));
+
+studentList.addEventListener("click", handleClick);
+
+function handleClick(event) {
+  const card = event.target.closest('[data-element="card"]');
+
+  if (!card) {
+    return;
+  }
+
+  card.classList.toggle("gray");
+}
