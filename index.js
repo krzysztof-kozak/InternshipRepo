@@ -95,6 +95,12 @@ function handleClick(event) {
   if (!card) {
     return;
   }
+  const cards = document.querySelectorAll('[data-element="card"]');
+  [...cards].forEach((c) => {
+    if (c.classList.contains("gray") && c !== card) {
+      c.classList.remove("gray");
+    }
+  });
 
   card.classList.toggle("gray");
 }
