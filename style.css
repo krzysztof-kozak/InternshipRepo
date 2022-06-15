@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0.5em;
+}
+
+.student-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    overflow-x: auto;
+    border: 1px solid black;
+    padding: 1rem;
+}

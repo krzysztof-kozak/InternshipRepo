@@ -68,6 +68,8 @@ function createStudentCard(studentData) {
 
   averageMarkParagraph.textContent = `Average mark: ${averageMark}`;
 
+  listItem.style.border = `1px solid ${averageMark > 5 ? "green" : "red"}`;
+
   listItem.appendChild(nameParagraph);
   listItem.appendChild(lastNameParagraph);
   listItem.appendChild(visitedLectureParagraph);
