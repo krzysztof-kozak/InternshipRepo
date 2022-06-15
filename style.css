@@ -19,6 +19,8 @@ li {
     overflow-x: auto;
     border: 1px solid black;
     padding: 1rem;
+    margin-inline: 1em;
+    margin-top: 1em;
 }
 
 .gray {
